@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets">
+        <item>Собака</item>
+        <item>кит</item>
+        <item>слон</item>
+        <item>черепаха</item>
+    </string-array>
+    <string-array name="stars">
+        <item>Собака</item>
+        <item>кит</item>
+        <item>слон</item>
+        <item>черепаха</item>
+    </string-array>
+    <string-array name="mer">
+        <item>Собака</item>
+        <item>кит</item>
+        <item>слон</item>
+        <item>черепаха</item>
+    </string-array>
+
+</resources>

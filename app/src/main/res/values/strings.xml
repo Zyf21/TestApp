@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="favorite">Избранное</string>
+    <string name="cosmo">Космос</string>
+    <string name="planet">Планеты</string>
+    <string name="stars">Звезды</string>
+</resources>
