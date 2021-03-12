@@ -4,13 +4,13 @@
         <item>Собака</item>
         <item>кит</item>
         <item>слон</item>
-        <item>черепаха</item>
+<!--        <item>черепаха</item>-->
     </string-array>
     <string-array name="stars">
-        <item>Собака</item>
-        <item>кит</item>
-        <item>слон</item>
-        <item>черепаха</item>
+        <item>555</item>
+        <item>ки66666т</item>
+        <item>сл77777он</item>
+        <item>чере88888паха</item>
     </string-array>
     <string-array name="mer">
         <item>Собака</item>

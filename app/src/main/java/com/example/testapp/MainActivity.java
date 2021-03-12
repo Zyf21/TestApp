@@ -51,15 +51,31 @@ public class MainActivity extends AppCompatActivity implements NavItemSelectedLi
         rcViev = findViewById(R.id.rcViev);
         rcViev.setLayoutManager(new LinearLayoutManager(this));
         listData = new ArrayList<>();
-        ListItem item = new ListItem();
-        item.setText("Говно ебучее");
-        listData.add(item);
-        listData.add(item);
-        listData.add(item);
-        listData.add(item);
-        listData.add(item);
-        listData.add(item);
-        listData.add(item);
+//        ListItem item = new ListItem();
+//        item.setText("Говно ебучее");
+//        item.setImageId(R.drawable.fon2);
+//        ListItem item2 = new ListItem();
+//        item2.setText("Java ебучая");
+//        item2.setImageId(R.drawable.fon);
+//        listData.add(item2);
+//        listData.add(item);
+//        listData.add(item);
+//        listData.add(item);
+//        listData.add(item);
+//        listData.add(item);
+//        listData.add(item);
+
+        String [] planets = getResources().getStringArray(R.array.planets);
+        int [] images = {R.drawable.fon, R.drawable.fon2, R.drawable.bec};
+        for (String planet : planets){
+            int i = 0;
+            ListItem item = new ListItem();
+            item.setText(planet);
+            item.setImageId(images[i]);
+            i++;
+            listData.add(item);
+
+        }
         adapter = new DataAdapter(this, recOnClickListener, listData);
         rcViev.setAdapter(adapter);
 
@@ -70,6 +86,22 @@ public class MainActivity extends AppCompatActivity implements NavItemSelectedLi
             @Override
             public void onItemCliked(int pos) {
                 Toast.makeText(MainActivity.this, "заебался блять" + pos, Toast.LENGTH_SHORT).show();
+
+                listData.clear();
+                String [] planets = getResources().getStringArray(R.array.stars);
+                int [] images = {R.drawable.fon, R.drawable.fon2, R.drawable.bec};
+                for (String planet : planets){
+                    int i = 0;
+                    ListItem item = new ListItem();
+                    item.setText(planet);
+                    item.setImageId(images[i]);
+                    i++;
+                    listData.add(item);
+
+                }
+                adapter = new DataAdapter(MainActivity.this, recOnClickListener, listData);
+                rcViev.setAdapter(adapter);
+
 
             }
         };

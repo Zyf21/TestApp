@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +38,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataHolder> {
     public void onBindViewHolder(@NonNull DataHolder holder, int position) {
         holder.setData(listItemsArray.get(position));
 
+
     }
 
     @Override
@@ -47,21 +49,32 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataHolder> {
     public class DataHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView tvText;
         private ImageButton imageButtonFav;
+        private ImageView imageView11;
 
         public DataHolder(@NonNull View itemView) {
             super(itemView);
             tvText = itemView.findViewById(R.id.tw2);
+            imageView11 = itemView.findViewById(R.id.imageView3);
 //            imageButtonFav = itemView.findViewById(R.id.imBat);
-//            itemView.setOnClickListener(this);
+            itemView.setOnClickListener(this);
         }
         public void setData(ListItem item){
+
             tvText.setText(item.getText());
+            imageView11.setImageResource(item.getImageId());
 
         }
 
         @Override
         public void onClick(View view) {
             recOnClickListener.onItemCliked(getAdapterPosition());
+
+        }
+
+        public void updateList(List<ListItem> listArray){
+            listItemsArray.clear();
+            listItemsArray.addAll(listArray);
+            notifyDataSetChanged();
 
         }
     }

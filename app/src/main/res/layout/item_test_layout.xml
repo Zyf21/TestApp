@@ -22,8 +22,9 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="395dp"
-                android:layout_height="236dp"
+                android:layout_width="391dp"
+                android:layout_height="216dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/fon"
                 tools:ignore="MissingConstraints" />
@@ -33,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:background="#40000000"
+                android:background="#400B0A0A"
                 android:text="TextView"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
